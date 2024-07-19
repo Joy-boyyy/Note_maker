@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 mongoose
-  .connect("mongodb://127.0.0.1:27017/desktopNoteDb")
+  .connect(process.env.MONGOATLAS)
   .then(() => {
     console.log("DataBase Connected");
   })
@@ -10,3 +10,5 @@ mongoose
   });
 
 module.exports = mongoose;
+
+// desktopNoteDb;
